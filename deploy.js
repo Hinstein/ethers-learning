@@ -58,12 +58,12 @@ async function main() {
     // await sendTxResponse.wait(1);
     // console.log(sendTxResponse);
 
-    // const currentFavoriteNumber = await contract.retrieve();
-    // console.log(`current favorite number: ${currentFavoriteNumber}`);
-    // const transactionResponse = await contract.store("7");
-    // const transactionReceipt = await transactionResponse.wait(1);
-    // const updatedFavoriteNumber = await contract.retrieve();
-    // console.log(`updated favorite number: ${updatedFavoriteNumber}`);
+    const currentFavoriteNumber = await contract.retrieve();
+    console.log(`current favorite number: ${currentFavoriteNumber}`);
+    const transactionResponse = await contract.store("7");
+    const transactionReceipt = await transactionResponse.wait(1);
+    const updatedFavoriteNumber = await contract.retrieve();
+    console.log(`updated favorite number: ${updatedFavoriteNumber}`);
 }
 
 main()
