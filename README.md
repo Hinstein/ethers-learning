@@ -62,15 +62,13 @@ If you like `typescript`, run `git checkout typescript` then run `yarn`
 RPC_URL=http://0.0.0.0:8545
 ```
 
-3. Hit the key on one of the accounts, and copy the key you see and place it into your `.env` file, similar to what you see in `.env.example`.
-
-<img src="./img/ganache-key.png" alt="ganache" width="500"/>
-
-<img src="./img/ganache-private-key.png" alt="ganache" width="500"/>
+3. Use a development-only account and place its private key in your local `.env` file. Never commit the real key.
 
 `.env` Example:
 
-PRIVATE_KEY=11ee3108a03081fe260ecdc106554d09d9d1209bcafd46942b10e02943effc4a
+```
+PRIVATE_KEY=YOUR_DEVELOPMENT_PRIVATE_KEY
+```
 
 4. Compile your code
 
@@ -116,11 +114,11 @@ Make sure you have a [metamask](https://metamask.io/) or other wallet, and expor
 
 USE A METAMASK THAT DOESNT HAVE ANY REAL FUNDS IN IT. Just in case you accidentally push your private key to a public place. I _highly_ recommend you use a different metamask or wallet when developing.
 
-1. [Export your private key](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and place it in your `.env` file, as done above.
+1. Export the private key for a development-only wallet and place it in your local `.env` file. Never commit it.
 
 2. Go to [Alchemy](https://alchemy.com/?a=673c802981) and create a new project on the testnet of choice (ie, Sepolia)
 3. Grab your URL associated with the testnet, and place it into your `.env` file.
-4. Make sure you have [testnet ETH](https://faucets.chain.link/) in your account. You can [get some here](https://faucets.chain.link/). You should get testnet ETH for the same testnet that you made a project in Alchemy (ie, Sepolia)
+4. Make sure you have testnet ETH in your account.
 5. Run
 
 ```
